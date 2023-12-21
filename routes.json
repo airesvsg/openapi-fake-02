@@ -1,0 +1,6 @@
+{
+    "/authentication-api/signin": "/authentication-api-signin",
+    "/authentication-api/recover-session": "/authentication-api-recover-session",
+    "/profile-api/person-data": "profile-api-person-data",
+    "/profile-api/commercial-info": "profile-api-commercial-info"
+}

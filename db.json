@@ -1,33 +1,53 @@
 {
-    "authentication-api-signin": 
-        {
-            "sso-token": "1a049d96-29f3-4970-a4cb-7ca24bd87c5f",
-            "challengeRequired": false,
-            "daysExpirePassword": 1000
-        }
-    ,
-    "authentication-api-recover-session": {
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
-        "expiresIn": 1703187759,
-        "idToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
-    },
-    "profile-api-person-data": {
-        "x-app-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJzdGF0dXMiOjIwMH0.I-cKWh86jvqo1ejMdJqjLET6YEbPD6__d9TIeGC1nh4"
-    },
-    "profile-api-commercial-info": {
-        "x-app-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6InByb2ZpbGUtYXBpLWNvbW1lcmNpYWwtaW5mbyIsImlhdCI6MTUxNjIzOTAyMn0.QHuZicSnj-VOgiCZuuWO6xKv2UPNz_dWGrOTGX19_Mg",
-        "personId": "8fc76b02-eb01-41c1-94a4-887d05db42f9",
-        "userId": "8fc76b02-eb01-41c1-94a4-887d05db42f9",
-        "id": 1,
-        "code": 2050,
-        "message": "commercial.info.success",
-        "status": 200,
-        "credit": {
-            "additional": 0,
-            "available": 267,
-            "limit": 500,
-            "percentages": [],
-            "validateCredits": true
-        }
-    }
+   "authentication-api-signin":{
+      "sso-token":"1a049d96-29f3-4970-a4cb-7ca24bd87c5f",
+      "challengeRequired":false,
+      "daysExpirePassword":1000
+   },
+   "authentication-api-recover-session":{
+      "accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+      "expiresIn":1703187759,
+      "idToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+   },
+   "profile-api-person-data":{
+      "x-app-token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJzdGF0dXMiOjIwMH0.I-cKWh86jvqo1ejMdJqjLET6YEbPD6__d9TIeGC1nh4"
+   },
+   "profile-api-commercial-info":[
+      {
+         "x-app-token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6InByb2ZpbGUtYXBpLWNvbW1lcmNpYWwtaW5mbyIsImlhdCI6MTUxNjIzOTAyMn0.QHuZicSnj-VOgiCZuuWO6xKv2UPNz_dWGrOTGX19_Mg",
+         "personId":"8fc76b02-eb01-41c1-94a4-887d05db42f9",
+         "userId":"8fc76b02-eb01-41c1-94a4-887d05db42f9",
+         "id":1,
+         "code":2050,
+         "message":"commercial.info.success",
+         "status":200,
+         "credit":{
+            "additional":0,
+            "available":267,
+            "limit":500,
+            "percentages":[
+               
+            ],
+            "validateCredits":true
+         }
+      },
+      {
+         "x-app-token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6ImlkMiIsImlhdCI6MTUxNjIzOTAyMn0.w8aQaoQy9o7prC8WOuJ3fqNtFRXUm9ZYCeXi9gF9Sas",
+         "personId":"d071ea4b-a795-443e-8a73-9245d6c71f68",
+         "userId":"d071ea4b-a795-443e-8a73-9245d6c71f68",
+         "id":2,
+         "code":2050,
+         "message":"commercial.info.success",
+         "status":200,
+         "credit":{
+            "additional":0,
+            "available":123,
+            "limit":100,
+            "percentages":[
+               
+            ],
+            "validateCredits":false
+         }
+      }
+   ]
 }

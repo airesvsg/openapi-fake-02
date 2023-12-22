@@ -18,6 +18,7 @@
         "x-app-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6InByb2ZpbGUtYXBpLWNvbW1lcmNpYWwtaW5mbyIsImlhdCI6MTUxNjIzOTAyMn0.QHuZicSnj-VOgiCZuuWO6xKv2UPNz_dWGrOTGX19_Mg",
         "personId": "8fc76b02-eb01-41c1-94a4-887d05db42f9",
         "userId": "8fc76b02-eb01-41c1-94a4-887d05db42f9",
+        "id": 1,
         "code": 2050,
         "message": "commercial.info.success",
         "status": 200,

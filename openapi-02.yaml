@@ -123,7 +123,7 @@ paths:
         - Profile
       servers:
         - url: https://my-json-server.typicode.com/airesvsg/openapi-fake
-      description: requisição para obter os dados da pessoa
+      description: requisição para obter os dados da pessoa, precisa executar as requisições da tag Authorization
       operationId: personData
       responses:
         '200':
@@ -138,7 +138,7 @@ paths:
         - Profile
       servers:
         - url: https://my-json-server.typicode.com/airesvsg/openapi-fake
-      description: antes de executar essa chamada, obtenha os dados da pessoa executando o person-data, requisição retorna os valores de crédito da pessoa
+      description: esta requisição retorna os valores de crédito da pessoa, mas antes de executar, obtenha o x-app-token executando o endpoint /profile-api-person-data
       operationId: commercial-info
       responses:
         '200':

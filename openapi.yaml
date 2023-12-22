@@ -1,0 +1,145 @@
+openapi: 3.0.0
+info:
+  title: Test API
+  description: Test API Description
+  version: "1.0"
+
+servers:
+  - url: https://my-json-server.typicode.com/airesvsg/openapi-fake
+  
+components:
+  schemas:
+    SignIn:
+      type: object
+      properties:
+        sso-token:
+          type: string
+          example: ba37b2f4-60a9-4ae1-a8d2-8590004bd5ff
+        challengeRequired:
+          type: boolean
+          example: false
+        daysExpirePassword:
+          type: number
+          example: 1000
+      required:
+        - name
+        - published
+    RecoverSession:
+      type: object
+      properties:
+        accessToken:
+          type: string
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6ImFjY2Vzc1Rva2VuRXhhbXBsZSIsImlhdCI6MTUxNjIzOTAyMn0.DKYFiAxAFDQq267qjsOwz-Hkgdiz4O0rga-CSqlCb1E
+        expiresIn:
+          type: number
+          example: 1000
+        idToken:
+          type: string
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6ImlkVG9rZW5FeGFtcGxlIiwiaWF0IjoxNTE2MjM5MDIyfQ.xIxmnipreBowJJBjuYZk5IfVyTOdTNE7BcbsIXrpHGc
+    PersonData:
+      type: object
+      properties:
+        x-app-token:
+          type: string
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6InhBcHBUb2tlbkV4YW1wbGUiLCJpYXQiOjE1MTYyMzkwMjJ9.Pyo2DaJnlVZ-G8WyQ4nPCZPdk0hr-6RtKo_F2r37Ojk
+    CommercialInfoCredit:
+        type: object
+        properties:
+          additional:
+            type: number
+            example: 1
+          available:
+            type: number
+            example: 123
+          limit: 
+            type: number
+            example: 1
+          percentages:
+            type: array
+            items: 
+              type: number
+              example: 123
+          validateCredits: 
+            type: boolean
+            example: false
+    CommercialInfo:
+      type: object
+      properties:
+        x-app-token:
+          type: string
+          example: 0e8ca7f7-b2f1-4b59-a76b-d6fd73e2f8c7
+        personId:
+          type: string
+          example: db26230c-a35d-4d0e-93bb-728c85a67df1
+        userId:
+          type: string
+          example: db26230c-a35d-4d0e-93bb-728c85a67df1
+        code:
+          type: number
+          example: 2050
+        message:
+          type: string
+          example: commercial.info.sucesso
+        status:
+          type: number
+          example: 200
+        credit:
+          $ref: '#/components/schemas/CommercialInfoCredit'
+
+paths:
+  /authentication-api-signin:
+    get:
+      tags:
+        - Authentication
+      servers:
+        - url: https://my-json-server.typicode.com/airesvsg/openapi-fake
+      description: primeira requisição a ser executada da tag Authentication
+      responses:
+        '200':
+          description: use o sso-token para chamar a segunda chamada da tag Authetication
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SignIn'
+  /authentication-api-recover-session:
+    get:
+      tags:
+        - Authentication
+      servers:
+        - url: https://my-json-server.typicode.com/airesvsg/openapi-fake
+      description: segunda requisição a ser executada da tag Authentication
+      responses:
+        '200':
+          description: use o accessToken no header para as próximas chamadas 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecoverSession'
+  /profile-api-person-data:
+    get:
+      tags:
+        - Profile
+      servers:
+        - url: https://my-json-server.typicode.com/airesvsg/openapi-fake
+      description: requisição para obter os dados da pessoa
+      responses:
+        '200':
+          description: use o x-app-token no header para as próximas chamadas
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PersonData'
+  /profile-api-commercial-info:
+    get:
+      tags:
+        - Profile
+      servers:
+        - url: https://my-json-server.typicode.com/airesvsg/openapi-fake
+      description: antes de executar essa chamada, obtenha os dados da pessoa executando o person-data, requisição retorna os valores de crédito da pessoa
+      responses:
+        '200':
+          description: informações de credito
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommercialInfo'
